@@ -35,11 +35,33 @@
 						<h2>Welcome to London’s Crime Map</h2>
 					</header>
 					<p><br /><strong>Your considerable travel assistant</a>.</strong></p>
-					<footer>
-						<a href="#one" class="button style2 down">More</a>
-					</footer>
+			<!-- Load icon library -->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			<!-- The form -->
+				<form role="search" id="form" >
+					<input type="search" id="query" name="q" placeholder="E01000907" aria-label="Search through site content">
+			
+				</form>
+				
+				<script>
+				const f = document.getElementById('form');
+				const q = document.getElementById('query');
+				const google = 'https://www.google.com/search?q=site%3A+';
+				const site = 'pagedart.com';
+
+				function submitted(event) {
+				event.preventDefault();
+				const url = google + site + '+' + q.value;
+				const win = window.open(url, '_blank');
+				win.focus();
+				}
+
+				f.addEventListener('submit', submitted);
+				</script>
 				</div>
-			</section>
+				<a href="#one" class="button style2 down anchored">Next</a>
+				</section>
 
 		<!-- One -->
 			<section id="one" class="main style2 right dark fullscreen">
@@ -47,8 +69,30 @@
 					<header>
 						<h2>London’s Crime Map</h2>
 					</header>
+				
+					<form role="search" id="form1" >
+						<input type="search" id="query1" name="q" placeholder="E01000907" aria-label="Search through site content">			
+					</form>
 					<p>here is the XINYU'S analysis part.</p>
-				</div>
+					<script>
+						const f = document.getElementById('form1');
+						const q = document.getElementById('query1');
+						const google = 'https://www.google.com/search?q=site%3A+';
+						const site = 'pagedart.com';
+
+						function submitted(event) {
+						event.preventDefault();
+						const url = google + site + '+' + q.value;
+						const win = window.open(url, '_blank');
+						win.focus();
+						}
+
+						f.addEventListener('submit', submitted);
+					</script>
+					</div>
+					
+					
+				
 				<a href="#work" class="button style2 down anchored">Next</a>
 			</section>
 
